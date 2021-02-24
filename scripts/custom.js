@@ -50,18 +50,13 @@ tl.to(menuContainer, {
 
 tl.pause();
 sh.pause();
-sh.to(".logo", {
-	x: -500,
-	opacity: 0,
-	display: "none",
+sh.to(searchBar, {
+	display: "inline",
+	opacity: 1,
+	duration: 1,
+	y: 0,
+	ease: "Expo.inOut",
 })
-	.to(searchBar, {
-		display: "inline",
-		opacity: 1,
-		duration: 1,
-		y: 0,
-		ease: "Expo.inOut",
-	})
 	.to(searchBtn, {
 		y: -100,
 		opacity: 0,
