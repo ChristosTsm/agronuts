@@ -1,0 +1,19 @@
+.e-p-img {
+	background: url("../assets/1x/ep-bg.png") center no-repeat;
+	background-size: cover;
+	min-height: 600px;
+}
+
+.ep-col-r {
+	background: #002d51;
+	border-radius: 50px 0 0 50px;
+	margin-left: -100px;
+	padding: 120px 120px 50px 50px;
+	color: #fff;
+
+	@media (max-width: #{$screen-sm-min}) {
+		margin-left: 0;
+		border-radius: 0;
+		padding: 20px;
+	}
+}

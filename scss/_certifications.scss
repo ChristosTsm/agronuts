@@ -1,0 +1,25 @@
+.cert-col-l {
+	background: #b5752e;
+	margin-right: -100px;
+	padding: 120px 50px 50px 120px;
+	color: #fff;
+	position: relative;
+	border-radius: 0 50px 50px 0;
+}
+
+.cert-col-img-wrapper {
+	background-color: #e4e4e4;
+	justify-content: center;
+	padding: 50px 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	row-gap: 40px;
+	div {
+		img {
+			margin: 0 40px;
+		}
+	}
+}
