@@ -4,7 +4,7 @@ var openMenuBtn = document.querySelector(".icon-open-menu");
 var closeMenuBtn = document.querySelector(".icon-close-menu");
 var menuList = document.querySelector(".menu-list");
 
-gsap.set(menuContainer, { x: 5000 });
+gsap.set(menuContainer, { x: 5000, display: "none" });
 gsap.set(closeMenuBtn, { x: -100, opacity: 0, display: "none" });
 gsap.set(".menu-list li", { y: 500, opacity: 0 });
 
@@ -12,6 +12,7 @@ let tl = gsap.timeline();
 
 tl.to(menuContainer, {
 	x: 0,
+	display: "flex",
 	height: "100%",
 	ease: "Expo.inOut",
 	duration: 1,
@@ -49,5 +50,9 @@ openMenuBtn.addEventListener("click", () => {
 });
 
 closeMenuBtn.addEventListener("click", () => {
-	tl.reverse();
+	if (tl.reverse()) {
+		tl.reverse();
+	} else {
+		gsap.set(menuContainer, { display: "none" });
+	}
 });
