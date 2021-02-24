@@ -3,12 +3,17 @@ var menuContainer = document.querySelector(".menu-overlay");
 var openMenuBtn = document.querySelector(".icon-open-menu");
 var closeMenuBtn = document.querySelector(".icon-close-menu");
 var menuList = document.querySelector(".menu-list");
+var searchBtn = document.querySelector(".icon-open-input");
+var closeSearch = document.querySelector(".icon-close-search");
+var searchBar = document.querySelector(".searchbar");
 
 gsap.set(menuContainer, { x: 5000, display: "none" });
 gsap.set(closeMenuBtn, { x: -100, opacity: 0, display: "none" });
+gsap.set(closeSearch, { y: -100, opacity: 0, display: "none" });
 gsap.set(".menu-list li", { y: 500, opacity: 0 });
-
+gsap.set(searchBar, { y: -500, opacity: 0, display: "none" });
 let tl = gsap.timeline();
+let sh = gsap.timeline();
 
 tl.to(menuContainer, {
 	x: 0,
@@ -44,6 +49,26 @@ tl.to(menuContainer, {
 	);
 
 tl.pause();
+sh.pause();
+sh.to(searchBar, {
+	display: "inline",
+	opacity: 1,
+	duration: 1,
+	y: 0,
+	ease: "Expo.inOut",
+})
+	.to(searchBtn, {
+		y: -100,
+		opacity: 0,
+		display: "none",
+		ease: "Expo.inOut",
+	})
+	.to(closeSearch, {
+		display: "inline",
+		y: 0,
+		opacity: 1,
+		ease: "Expo.inOut",
+	});
 
 openMenuBtn.addEventListener("click", () => {
 	tl.play();
@@ -55,4 +80,12 @@ closeMenuBtn.addEventListener("click", () => {
 	} else {
 		gsap.set(menuContainer, { display: "none" });
 	}
+});
+
+searchBtn.addEventListener("click", () => {
+	sh.play();
+});
+
+closeSearch.addEventListener("click", () => {
+	sh.reverse();
 });
