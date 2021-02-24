@@ -108,6 +108,7 @@ header {
 	letter-spacing: 10px;
 	text-transform: uppercase;
 	margin-bottom: 20px;
+	white-space: nowrap;
 	@media (max-width: #{$screen-sm-min}) {
 		display: block;
 		font-size: 2em;
