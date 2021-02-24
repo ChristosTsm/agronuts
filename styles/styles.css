@@ -116,7 +116,7 @@
 @media (max-width: 576px) {
   .menu-overlay .menu-list {
     font-size: 1em;
-    margin-right: 110px;
+    margin-right: 100px;
     margin-bottom: 110px;
   }
 }
@@ -136,7 +136,7 @@
   .menu-overlay .menu-list .menu-list-item {
     padding-right: 5px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 }
 
@@ -190,6 +190,7 @@
     left: 145px;
     top: 0;
     font-size: 0.9em;
+    width: 105px;
   }
 }
 
