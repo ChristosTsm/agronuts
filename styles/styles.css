@@ -394,6 +394,8 @@ a {
 @media (max-width: 576px) {
   .cert-col-img-wrapper {
     padding: 120px 20px;
+    text-align: center;
+    row-gap: 5px;
   }
 }
 

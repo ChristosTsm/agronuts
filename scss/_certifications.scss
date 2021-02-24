@@ -32,5 +32,7 @@
 	}
 	@media (max-width: #{$screen-sm-min}) {
 		padding: 120px 20px;
+		text-align: center;
+		row-gap: 5px;
 	}
 }
