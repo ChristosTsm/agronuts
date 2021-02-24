@@ -94,6 +94,7 @@
 			display: flex;
 			align-items: center;
 			padding-right: 80px;
+			font-weight: 600;
 			@media (max-width: #{$screen-sm-min}) {
 				padding-right: 5px;
 				display: block;
@@ -119,6 +120,7 @@
 				display: none;
 				li {
 					margin-bottom: 40px;
+					font-weight: 600;
 					a {
 						text-transform: capitalize;
 						&:hover {

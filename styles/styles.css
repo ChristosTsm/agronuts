@@ -130,6 +130,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding-right: 80px;
+  font-weight: 600;
 }
 
 @media (max-width: 576px) {
@@ -167,6 +168,7 @@
 
 .menu-overlay .menu-list .menu-list-item .sub-menu li {
   margin-bottom: 40px;
+  font-weight: 600;
 }
 
 .menu-overlay .menu-list .menu-list-item .sub-menu li a {
@@ -280,7 +282,7 @@ a {
   background: #114221;
   border-radius: 50px 0 0 50px;
   margin-left: -100px;
-  padding: 120px 120px 50px 50px;
+  padding: 120px 120px 50px 110px;
   color: #fff;
 }
 
