@@ -5,6 +5,14 @@
 	color: #fff;
 	position: relative;
 	border-radius: 0 50px 50px 0;
+
+	@media (max-width: #{$screen-sm-min}) {
+		margin-left: 0;
+		border-radius: 0;
+		padding: 20px;
+		grid-row: 2;
+		max-width: 100%;
+	}
 }
 
 .cert-col-img-wrapper {
@@ -21,5 +29,8 @@
 		img {
 			margin: 0 40px;
 		}
+	}
+	@media (max-width: #{$screen-sm-min}) {
+		padding: 120px 20px;
 	}
 }

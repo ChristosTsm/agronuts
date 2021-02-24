@@ -95,7 +95,7 @@
 			align-items: center;
 			padding-right: 80px;
 			@media (max-width: #{$screen-sm-min}) {
-				padding-right: 0;
+				padding-right: 5px;
 				display: block;
 				margin-bottom: 10px;
 			}
