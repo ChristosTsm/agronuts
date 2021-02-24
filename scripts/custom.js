@@ -14,6 +14,7 @@ gsap.set(".menu-list li", { y: 500, opacity: 0 });
 gsap.set(searchBar, { y: -500, opacity: 0, display: "none" });
 let tl = gsap.timeline();
 let sh = gsap.timeline();
+let sh_mob = gsap.timeline();
 
 tl.to(menuContainer, {
 	x: 0,
@@ -50,6 +51,34 @@ tl.to(menuContainer, {
 
 tl.pause();
 sh.pause();
+sh_mob.pause();
+
+sh_mob
+	.to(".logo", {
+		x: -500,
+		opacity: 0,
+		display: "none",
+	})
+	.to(searchBar, {
+		display: "inline",
+		opacity: 1,
+		duration: 1,
+		y: 0,
+		ease: "Expo.inOut",
+	})
+	.to(searchBtn, {
+		y: -100,
+		opacity: 0,
+		display: "none",
+		ease: "Expo.inOut",
+	})
+	.to(closeSearch, {
+		display: "inline",
+		y: 0,
+		opacity: 1,
+		ease: "Expo.inOut",
+	});
+
 sh.to(searchBar, {
 	display: "inline",
 	opacity: 1,
@@ -83,9 +112,17 @@ closeMenuBtn.addEventListener("click", () => {
 });
 
 searchBtn.addEventListener("click", () => {
-	sh.play();
+	if (window.matchMedia("(max-width: 576px)").matches) {
+		return sh_mob.play();
+	} else {
+		return sh.play();
+	}
 });
 
 closeSearch.addEventListener("click", () => {
-	sh.reverse();
+	if (window.matchMedia("(max-width: 576px)").matches) {
+		return sh_mob.reverse();
+	} else {
+		return sh.reverse();
+	}
 });
